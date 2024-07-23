@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_top_section.dart';
 
 class QuickInvoiceWidget extends StatelessWidget {
