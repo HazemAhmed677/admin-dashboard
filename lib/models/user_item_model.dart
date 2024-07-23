@@ -1,6 +1,6 @@
-class UserItem {
+class UserModel {
   final String iconImage;
   final String text;
 
-  UserItem({required this.iconImage, required this.text});
+  UserModel({required this.iconImage, required this.text});
 }

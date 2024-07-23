@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/user_item_model.dart';
 import 'package:responsive_dash_board/utils/assets.dart';
-import 'package:responsive_dash_board/widgets/list_uset_item.dart';
+import 'package:responsive_dash_board/widgets/user_item.dart';
 
 class ListOfUserItems extends StatefulWidget {
   const ListOfUserItems({
@@ -13,26 +13,26 @@ class ListOfUserItems extends StatefulWidget {
 }
 
 class _ListOfUserItemsState extends State<ListOfUserItems> {
-  final List<UserItem> items = [
-    UserItem(iconImage: Assets.imagesDashboard, text: 'Dashboard'),
-    UserItem(iconImage: Assets.imagesmyTransaction, text: 'My Transaction'),
-    UserItem(iconImage: Assets.imagesStatistics, text: 'Statistics'),
-    UserItem(iconImage: Assets.imagesWallet, text: 'Wallet Account'),
-    UserItem(iconImage: Assets.imagesInvestment, text: 'My Investments'),
+  final List<UserModel> items = [
+    UserModel(iconImage: Assets.imagesDashboard, text: 'Dashboard'),
+    UserModel(iconImage: Assets.imagesmyTransaction, text: 'My Transaction'),
+    UserModel(iconImage: Assets.imagesStatistics, text: 'Statistics'),
+    UserModel(iconImage: Assets.imagesWallet, text: 'Wallet Account'),
+    UserModel(iconImage: Assets.imagesInvestment, text: 'My Investments'),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 10.0,
-          ),
-          child: ListUserItem(
-            userItem: items[index],
-          ),
+    return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: items.length,
+      itemBuilder: (context, index) => Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 10.0,
+        ),
+        child: UserItem(
+          userItem: items[index],
         ),
       ),
     );

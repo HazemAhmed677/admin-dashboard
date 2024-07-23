@@ -15,17 +15,26 @@ class UserInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: SvgPicture.asset(image),
+      leading: ClipOval(
+        child: SvgPicture.asset(
+          image,
+        ),
       ),
-      title: Text(
-        title,
-        style: AppStyles.styleSemiBold16,
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          title,
+          style: AppStyles.styleSemiBold16,
+        ),
       ),
-      subtitle: Text(
-        subTitle,
-        style: AppStyles.styleRegular12,
+      subtitle: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          subTitle,
+          style: AppStyles.styleRegular12,
+        ),
       ),
     );
   }
