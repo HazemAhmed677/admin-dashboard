@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_board/models/expanses_card_model.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
-import 'package:responsive_dash_board/utils/assets.dart';
 
 class ExpansesCard extends StatelessWidget {
   const ExpansesCard({
@@ -28,13 +27,9 @@ class ExpansesCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                (cardModel.iconImage == Assets.imagesBalance)
-                    ? SvgPicture.asset(
-                        cardModel.iconImage,
-                      )
-                    : SvgPicture.asset(
-                        cardModel.iconImage,
-                      ),
+                SvgPicture.asset(
+                  cardModel.iconImage,
+                ),
                 const SizedBox(
                   width: 56,
                 ),
