@@ -19,7 +19,7 @@ class Assets {
 
   /// Assets for imagesCategory
   /// assets/images/category.svg
-  static const String imagesCategory = "assets/images/category.svg";
+  static const String imagesDashboard = "assets/images/dashboard.svg";
 
   /// Assets for imagesExpanses
   /// assets/images/expanses.svg
