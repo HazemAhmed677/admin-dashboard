@@ -18,13 +18,11 @@ class _ListOfUserBottomItemsState extends State<ListOfUserBottomItems> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: bottomItems.length,
-      itemBuilder: (context, index) => UserItem(
-        userItem: bottomItems[index],
-      ),
+    return Column(
+      children: [
+        UserItem(userItem: bottomItems[0]),
+        UserItem(userItem: bottomItems[1]),
+      ],
     );
   }
 }
