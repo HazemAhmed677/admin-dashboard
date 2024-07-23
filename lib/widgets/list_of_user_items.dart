@@ -24,6 +24,7 @@ class _ListOfUserItemsState extends State<ListOfUserItems> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: EdgeInsets.zero,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,

@@ -10,18 +10,18 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: MainContainer(
+    return const MainContainer(
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
             child: UserProfileColumn(),
           ),
-        ),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: UserProfileBottomColumn(),
-        )
-      ],
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: UserProfileBottomColumn(),
+          )
+        ],
+      ),
     );
   }
 }
