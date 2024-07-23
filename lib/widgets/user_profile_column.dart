@@ -12,13 +12,10 @@ class UserProfileColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Padding(
-          padding: EdgeInsets.only(top: 16),
-          child: UserInfo(
-            image: Assets.imagesAvatar1,
-            title: 'Lekan Okeowo',
-            subTitle: 'demo@gmail.com',
-          ),
+        UserInfo(
+          image: Assets.imagesAvatar1,
+          title: 'Lekan Okeowo',
+          subTitle: 'demo@gmail.com',
         ),
         SizedBox(
           height: 28,
