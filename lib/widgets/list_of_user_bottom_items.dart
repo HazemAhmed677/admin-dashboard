@@ -21,6 +21,9 @@ class _ListOfUserBottomItemsState extends State<ListOfUserBottomItems> {
     return Column(
       children: [
         UserItem(userItem: bottomItems[0]),
+        const SizedBox(
+          height: 10,
+        ),
         UserItem(userItem: bottomItems[1]),
       ],
     );

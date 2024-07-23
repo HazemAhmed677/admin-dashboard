@@ -8,14 +8,17 @@ class UserProfileBottomColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
-      Expanded(
-        child: SizedBox(),
-      ),
-      ListOfUserBottomItems(),
-      SizedBox(
-        height: 20,
-      ),
-    ]);
+    return Padding(
+      padding: const EdgeInsets.only(left: 28.0),
+      child: const Column(children: [
+        Expanded(
+          child: SizedBox(),
+        ),
+        ListOfUserBottomItems(),
+        SizedBox(
+          height: 20,
+        ),
+      ]),
+    );
   }
 }

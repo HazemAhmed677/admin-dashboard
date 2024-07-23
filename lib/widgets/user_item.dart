@@ -8,7 +8,9 @@ class UserItem extends StatelessWidget {
   const UserItem({
     super.key,
     required this.userItem,
+    this.isActive,
   });
+  final bool? isActive;
   final UserModel userItem;
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,9 @@ class UserItem extends StatelessWidget {
           child: Text(
             userItem.text,
             style: AppStyles.styleRegular16.copyWith(
-              color: AppColors.primary,
+              color: (isActive ?? false)
+                  ? AppColors.secondPrimary
+                  : AppColors.primary,
             ),
           ),
         ),

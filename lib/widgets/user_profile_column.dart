@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/assets.dart';
-import 'package:responsive_dash_board/widgets/list_of_user_bottom_items.dart';
 import 'package:responsive_dash_board/widgets/list_of_user_items.dart';
 import 'package:responsive_dash_board/widgets/user_info.dart';
 

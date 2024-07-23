@@ -20,7 +20,7 @@ class _ListOfUserItemsState extends State<ListOfUserItems> {
     UserModel(iconImage: Assets.imagesWallet, text: 'Wallet Account'),
     UserModel(iconImage: Assets.imagesInvestment, text: 'My Investments'),
   ];
-
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -31,8 +31,16 @@ class _ListOfUserItemsState extends State<ListOfUserItems> {
         padding: const EdgeInsets.symmetric(
           vertical: 10.0,
         ),
-        child: UserItem(
-          userItem: items[index],
+        child: GestureDetector(
+          onTap: () {
+            setState(() {
+              currentIndex = index;
+            });
+          },
+          child: UserItem(
+            isActive: (currentIndex == index),
+            userItem: items[index],
+          ),
         ),
       ),
     );
