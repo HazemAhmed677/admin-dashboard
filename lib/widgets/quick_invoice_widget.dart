@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
-import 'package:responsive_dash_board/utils/assets.dart';
-import 'package:responsive_dash_board/widgets/user_info.dart';
+import 'package:responsive_dash_board/widgets/latest_transaction.dart';
+import 'package:responsive_dash_board/widgets/users_list_view.dart';
 
 class QuickInvoiceWidget extends StatelessWidget {
   const QuickInvoiceWidget({super.key});
@@ -21,19 +20,7 @@ class QuickInvoiceWidget extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Latest Transaction',
-                style: AppStyles.style1Medium16,
-              ),
-              Icon(
-                Icons.add,
-                color: AppColors.secondPrimary,
-              ),
-            ],
-          ),
+          LatestTransactions(),
           SizedBox(
             height: 12,
           ),
@@ -42,45 +29,6 @@ class QuickInvoiceWidget extends StatelessWidget {
             child: UsersListView(),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class UsersListView extends StatefulWidget {
-  const UsersListView({super.key});
-
-  @override
-  State<UsersListView> createState() => _UsersListViewState();
-}
-
-class _UsersListViewState extends State<UsersListView> {
-  final List<UserInfo> users = const [
-    UserInfo(
-        image: Assets.imagesAvatar2,
-        title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail'),
-    UserInfo(
-        image: Assets.imagesAvatar3,
-        title: 'Josua Nunito',
-        subTitle: 'Josua Nunito@gmail'),
-    UserInfo(
-        image: Assets.imagesAvatar2,
-        title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail'),
-    UserInfo(
-        image: Assets.imagesAvatar3,
-        title: 'Josua Nunito',
-        subTitle: 'Josua Nunito@gmail'),
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: users.length,
-      itemBuilder: (context, index) => SizedBox(
-        width: 220,
-        child: users[index],
       ),
     );
   }
