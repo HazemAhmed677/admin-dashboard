@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:responsive_dash_board/utils/app_colors.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/utils/assets.dart';
+import 'package:responsive_dash_board/widgets/all_expanses_cards.dart';
 import 'package:responsive_dash_board/widgets/all_expanses_word.dart';
 
 class AllExpansesWidget extends StatelessWidget {
@@ -11,6 +16,10 @@ class AllExpansesWidget extends StatelessWidget {
     return const Column(
       children: [
         AllExpansesWord(),
+        SizedBox(
+          height: 28,
+        ),
+        AllExpansesCards(),
       ],
     );
   }
