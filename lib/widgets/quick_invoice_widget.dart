@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/utils/assets.dart';
 import 'package:responsive_dash_board/widgets/user_info.dart';
@@ -20,11 +21,26 @@ class QuickInvoiceWidget extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
-          Text(
-            'Latest Transaction',
-            style: AppStyles.style1Medium16,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Latest Transaction',
+                style: AppStyles.style1Medium16,
+              ),
+              Icon(
+                Icons.add,
+                color: AppColors.secondPrimary,
+              ),
+            ],
           ),
-          UsersListView(),
+          SizedBox(
+            height: 12,
+          ),
+          SizedBox(
+            height: 56,
+            child: UsersListView(),
+          ),
         ],
       ),
     );
@@ -52,17 +68,20 @@ class _UsersListViewState extends State<UsersListView> {
         image: Assets.imagesAvatar2,
         title: 'Madrani Andi',
         subTitle: 'Madraniadi20@gmail'),
+    UserInfo(
+        image: Assets.imagesAvatar3,
+        title: 'Josua Nunito',
+        subTitle: 'Josua Nunito@gmail'),
   ];
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: users
-          .map(
-            (e) => Expanded(
-              child: e,
-            ),
-          )
-          .toList(),
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: users.length,
+      itemBuilder: (context, index) => SizedBox(
+        width: 220,
+        child: users[index],
+      ),
     );
   }
 }

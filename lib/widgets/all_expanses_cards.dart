@@ -19,14 +19,18 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: List.generate(
-        3,
-        (index) => Padding(
-          padding:
-              (index != 2) ? const EdgeInsets.only(right: 12) : EdgeInsets.zero,
-          child: ExpansesCard(
-            cardModel: cards[index],
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: List.generate(
+          3,
+          (index) => Padding(
+            padding: (index != 2)
+                ? const EdgeInsets.only(right: 12)
+                : EdgeInsets.zero,
+            child: ExpansesCard(
+              cardModel: cards[index],
+            ),
           ),
         ),
       ),
