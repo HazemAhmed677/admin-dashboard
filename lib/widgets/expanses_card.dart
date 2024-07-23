@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:responsive_dash_board/models/expanses_card_model.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class ExpansesCard extends StatelessWidget {
   const ExpansesCard({
     super.key,
-    required this.image,
-    required this.type,
+    required this.cardModel,
   });
-  final String image;
-  final String type;
+  final ExpansesCardModel cardModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +27,10 @@ class ExpansesCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                SvgPicture.asset(image),
+                SvgPicture.asset(
+                  cardModel.iconImage,
+                  fit: BoxFit.fill,
+                ),
                 const SizedBox(
                   width: 56,
                 ),
@@ -43,7 +45,7 @@ class ExpansesCard extends StatelessWidget {
               height: 34,
             ),
             Text(
-              type,
+              cardModel.type,
               style: AppStyles.styleSemiBold16.copyWith(
                 color: AppColors.white,
               ),

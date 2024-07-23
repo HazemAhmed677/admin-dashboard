@@ -14,6 +14,7 @@ class DashBoardBody extends StatelessWidget {
         children: [
           Expanded(child: CustomDrawer()),
           Expanded(
+            flex: 2,
             child: MainContainer(
               child: AllExpansesWidget(),
             ),
