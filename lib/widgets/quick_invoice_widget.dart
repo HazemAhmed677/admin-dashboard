@@ -7,14 +7,16 @@ class QuickInvoiceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        QuickInvoiceTopSection(),
-        SizedBox(
-          height: 32,
-        ),
-        FieldsForm(),
-      ],
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          QuickInvoiceTopSection(),
+          Divider(
+            height: 48,
+          ),
+          FieldsForm(),
+        ],
+      ),
     );
   }
 }

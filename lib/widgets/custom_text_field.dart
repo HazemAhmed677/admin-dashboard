@@ -16,12 +16,23 @@ class CustomTextField extends StatelessWidget {
         ),
         TextField(
           decoration: InputDecoration(
-            hintText: textFieldModel.hint,
-            hintStyle: textFieldModel.style,
-            enabledBorder: InputBorder.none,
-          ),
+              hintText: textFieldModel.hint,
+              hintStyle: textFieldModel.style,
+              enabledBorder: buildBorder(),
+              focusedBorder: buildBorder(),
+              fillColor: const Color(0xffFAFAFA),
+              filled: true),
         ),
       ],
+    );
+  }
+
+  OutlineInputBorder buildBorder() {
+    return OutlineInputBorder(
+      borderSide: const BorderSide(
+        color: Colors.transparent,
+      ),
+      borderRadius: BorderRadius.circular(12),
     );
   }
 }

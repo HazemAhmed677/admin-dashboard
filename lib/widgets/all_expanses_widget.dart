@@ -13,6 +13,7 @@ class AllExpansesWidget extends StatelessWidget {
     return const MainContainer(
       child: CustomScrollView(slivers: [
         SliverFillRemaining(
+          hasScrollBody: false,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
