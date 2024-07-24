@@ -11,6 +11,8 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MainContainer(
+      rightPadding: 20,
+      leftPadding: 28,
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(

@@ -14,8 +14,8 @@ class QuickInvoiceWidget extends StatelessWidget {
         children: [
           QuickInvoiceTopSection(),
           Divider(
-            endIndent: 24,
-            indent: 24,
+            endIndent: 28,
+            indent: 28,
             height: 48,
           ),
           FieldsForm(),

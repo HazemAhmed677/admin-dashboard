@@ -11,6 +11,8 @@ class AllExpansesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MainContainer(
+      rightPadding: 20,
+      leftPadding: 16,
       child: CustomScrollView(slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
@@ -20,8 +22,9 @@ class AllExpansesWidget extends StatelessWidget {
               ExpansesSection(),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 16.0,
+                  padding: EdgeInsets.only(
+                    top: 22.0,
+                    bottom: 14,
                   ),
                   child: QuickInvoiceWidget(),
                 ),

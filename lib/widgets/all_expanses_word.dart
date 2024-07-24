@@ -25,7 +25,10 @@ class AllExpansesWord extends StatelessWidget {
               width: 18,
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
+              padding: const EdgeInsets.only(
+                bottom: 10.0,
+                right: 14,
+              ),
               child: Transform.rotate(
                 alignment: Alignment.center,
                 angle: -1.5708,

@@ -32,7 +32,10 @@ class ExpansesCard extends StatelessWidget {
                 SvgPicture.asset(
                   cardModel.iconImage,
                   colorFilter: (isActive)
-                      ? const ColorFilter.mode(AppColors.white, BlendMode.srcIn)
+                      ? const ColorFilter.mode(
+                          AppColors.white,
+                          BlendMode.srcIn,
+                        )
                       : const ColorFilter.mode(
                           AppColors.secondPrimary, BlendMode.srcIn),
                 ),
@@ -63,7 +66,7 @@ class ExpansesCard extends StatelessWidget {
             Text(
               'April 2022',
               style: AppStyles.styleRegular14.copyWith(
-                color: AppColors.white,
+                color: (isActive) ? AppColors.semiWhite : Colors.grey.shade400,
               ),
             ),
             const SizedBox(
