@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/main_container.dart';
+import 'package:responsive_dash_board/widgets/my_card_container.dart';
 
 class MyCardWidget extends StatelessWidget {
   const MyCardWidget({super.key});
@@ -20,9 +21,12 @@ class MyCardWidget extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+          MyCardContainer(),
           // PageView.builder(
           //   itemCount: 3,
-          //   itemBuilder: (BuildContext context, int index) => ,)
+          //   itemBuilder: (BuildContext context, int index) =>
+          //       MyCardContainer(),
+          // ),
         ],
       ),
     );

@@ -9,7 +9,10 @@ class DashBoardBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 14, bottom: 16),
+      padding: EdgeInsets.only(
+        top: 14,
+        bottom: 16,
+      ),
       child: Row(
         children: [
           Expanded(child: CustomDrawer()),
