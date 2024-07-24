@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/app_colors.dart';
 
 abstract class AppStyles {
   static const TextStyle styleRegular12 = TextStyle(
@@ -22,31 +23,31 @@ abstract class AppStyles {
   static const TextStyle style1Medium16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: Color(0xff064061),
+    color: AppColors.primary,
     fontFamily: 'Montserrat',
   );
   static const TextStyle styleSemiBold16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: Color(0xff064061),
+    color: AppColors.primary,
     fontFamily: 'Montserrat',
   );
   static const TextStyle styleBold16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w700,
-    color: Color(0xff4EB7F2),
+    color: AppColors.secondPrimary,
     fontFamily: 'Montserrat',
   );
   static const TextStyle styleSemiBold18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: Color(0xff4EB7F2),
+    color: AppColors.secondPrimary,
     fontFamily: 'Montserrat',
   );
   static const TextStyle styleSemiBold20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w600,
-    color: Color(0xff064061),
+    color: AppColors.primary,
     fontFamily: 'Montserrat',
   );
   static const TextStyle styleMedium20 = TextStyle(
@@ -58,7 +59,7 @@ abstract class AppStyles {
   static const TextStyle styleSemiBold24 = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w600,
-    color: Color(0xff4EB7F2),
+    color: AppColors.secondPrimary,
     fontFamily: 'Montserrat',
   );
 }

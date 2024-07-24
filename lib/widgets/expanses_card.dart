@@ -8,14 +8,16 @@ class ExpansesCard extends StatelessWidget {
   const ExpansesCard({
     super.key,
     required this.cardModel,
+    required this.isActive,
   });
   final ExpansesCardModel cardModel;
+  final bool isActive;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: AppColors.secondPrimary,
+        color: (isActive) ? AppColors.secondPrimary : AppColors.white,
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(
@@ -29,15 +31,19 @@ class ExpansesCard extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   cardModel.iconImage,
+                  colorFilter: (isActive)
+                      ? const ColorFilter.mode(AppColors.white, BlendMode.srcIn)
+                      : const ColorFilter.mode(
+                          AppColors.secondPrimary, BlendMode.srcIn),
                 ),
                 const SizedBox(
                   width: 56,
                 ),
                 Transform.rotate(
                   angle: 3.14159,
-                  child: const Icon(
+                  child: Icon(
                     Icons.arrow_back_ios,
-                    color: AppColors.white,
+                    color: (isActive) ? AppColors.white : AppColors.primary,
                   ),
                 ),
               ],
@@ -48,7 +54,7 @@ class ExpansesCard extends StatelessWidget {
             Text(
               cardModel.type,
               style: AppStyles.styleSemiBold16.copyWith(
-                color: AppColors.white,
+                color: (isActive) ? AppColors.white : AppColors.primary,
               ),
             ),
             const SizedBox(
@@ -66,7 +72,7 @@ class ExpansesCard extends StatelessWidget {
             Text(
               r'$20,129',
               style: AppStyles.styleSemiBold24.copyWith(
-                color: AppColors.white,
+                color: (isActive) ? AppColors.white : AppColors.secondPrimary,
               ),
             )
           ],

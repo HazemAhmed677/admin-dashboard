@@ -16,7 +16,7 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
     ExpansesCardModel(iconImage: Assets.imagesIncom, type: 'Incom'),
     ExpansesCardModel(iconImage: Assets.imagesExpanses, type: 'Expanses'),
   ];
-
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -28,8 +28,16 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
             padding: (index != 2)
                 ? const EdgeInsets.only(right: 12)
                 : EdgeInsets.zero,
-            child: ExpansesCard(
-              cardModel: cards[index],
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  currentIndex = index;
+                });
+              },
+              child: ExpansesCard(
+                isActive: (currentIndex == index),
+                cardModel: cards[index],
+              ),
             ),
           ),
         ),
