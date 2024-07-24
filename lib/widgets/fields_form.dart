@@ -3,14 +3,14 @@ import 'package:responsive_dash_board/models/text_field_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/custom_text_field.dart';
 
-class GridVewOfFields extends StatefulWidget {
-  const GridVewOfFields({super.key});
+class FieldsForm extends StatefulWidget {
+  const FieldsForm({super.key});
 
   @override
-  State<GridVewOfFields> createState() => _GridVewOfFieldsState();
+  State<FieldsForm> createState() => _FieldsFormState();
 }
 
-class _GridVewOfFieldsState extends State<GridVewOfFields> {
+class _FieldsFormState extends State<FieldsForm> {
   final List<TextFieldModel> fields = [
     TextFieldModel(
       text: 'Customer Name',
@@ -43,16 +43,42 @@ class _GridVewOfFieldsState extends State<GridVewOfFields> {
   ];
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      itemCount: fields.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-      ),
-      itemBuilder: (BuildContext context, int index) {
-        return CustomTextField(
-          textFieldModel: fields[index],
-        );
-      },
+    return Column(
+      children: [
+        Row(
+          children: [
+            Expanded(
+                child: CustomTextField(
+              textFieldModel: fields[0],
+            )),
+            const SizedBox(
+              width: 16,
+            ),
+            Expanded(
+                child: CustomTextField(
+              textFieldModel: fields[1],
+            )),
+          ],
+        ),
+        const SizedBox(
+          height: 24,
+        ),
+        Row(
+          children: [
+            Expanded(
+                child: CustomTextField(
+              textFieldModel: fields[2],
+            )),
+            const SizedBox(
+              width: 16,
+            ),
+            Expanded(
+                child: CustomTextField(
+              textFieldModel: fields[3],
+            )),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -31,6 +31,7 @@ class _UsersListViewState extends State<UsersListView> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: EdgeInsets.zero,
       scrollDirection: Axis.horizontal,
       itemCount: users.length,
       itemBuilder: (context, index) => SizedBox(

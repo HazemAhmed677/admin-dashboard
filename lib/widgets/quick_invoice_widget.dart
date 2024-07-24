@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/fields_form.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_top_section.dart';
 
 class QuickInvoiceWidget extends StatelessWidget {
@@ -6,13 +7,14 @@ class QuickInvoiceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 24),
-      child: Column(
-        children: [
-          QuickInvoiceTopSection(),
-        ],
-      ),
+    return const Column(
+      children: [
+        QuickInvoiceTopSection(),
+        SizedBox(
+          height: 32,
+        ),
+        FieldsForm(),
+      ],
     );
   }
 }

@@ -11,13 +11,22 @@ class AllExpansesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MainContainer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ExpansesSection(),
-          QuickInvoiceWidget(),
-        ],
-      ),
+      child: CustomScrollView(slivers: [
+        SliverFillRemaining(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ExpansesSection(),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16.0),
+                  child: QuickInvoiceWidget(),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ]),
     );
   }
 }
