@@ -17,7 +17,7 @@ class MyCardListTile extends StatelessWidget {
         contentPadding: EdgeInsets.zero,
         title: Padding(
           padding: const EdgeInsets.only(
-            left: 24,
+            left: 22,
           ),
           child: Text(
             'Name Card',
@@ -27,7 +27,7 @@ class MyCardListTile extends StatelessWidget {
           ),
         ),
         subtitle: const Padding(
-          padding: EdgeInsets.only(left: 24, top: 4.0),
+          padding: EdgeInsets.only(left: 22, top: 4.0),
           child: Text(
             'Syah Bandi',
             style: AppStyles.styleMedium20,
