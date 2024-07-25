@@ -2,14 +2,14 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
 
-class CustomChart extends StatefulWidget {
-  const CustomChart({super.key});
+class CustomChartSection extends StatefulWidget {
+  const CustomChartSection({super.key});
 
   @override
-  State<CustomChart> createState() => _CustomChartState();
+  State<CustomChartSection> createState() => _CustomChartSectionState();
 }
 
-class _CustomChartState extends State<CustomChart> {
+class _CustomChartSectionState extends State<CustomChartSection> {
   int currentIndex = -1;
   @override
   Widget build(BuildContext context) {
@@ -25,32 +25,20 @@ class _CustomChartState extends State<CustomChart> {
           },
         ),
         sectionsSpace: 0,
-        sections: [
-          PieChartSectionData(
+        sections: List.generate(4, (index) {
+          return PieChartSectionData(
             value: 22,
-            color: const Color(0xffE2DECD),
+            color: (index == 0)
+                ? const Color(0xffE2DECD)
+                : (index == 1)
+                    ? AppColors.primary
+                    : (index == 2)
+                        ? AppColors.secondPrimary
+                        : const Color(0xff208CC8),
             showTitle: false,
-            radius: (currentIndex == 0) ? 50 : 40,
-          ),
-          PieChartSectionData(
-            value: 20,
-            color: AppColors.primary,
-            showTitle: false,
-            radius: (currentIndex == 1) ? 50 : 40,
-          ),
-          PieChartSectionData(
-            value: 25,
-            color: AppColors.secondPrimary,
-            showTitle: false,
-            radius: (currentIndex == 2) ? 50 : 40,
-          ),
-          PieChartSectionData(
-            value: 40,
-            color: const Color(0xff208CC8),
-            showTitle: false,
-            radius: (currentIndex == 3) ? 50 : 40,
-          ),
-        ],
+            radius: (currentIndex == index) ? 50 : 40,
+          );
+        }),
       ),
     );
   }

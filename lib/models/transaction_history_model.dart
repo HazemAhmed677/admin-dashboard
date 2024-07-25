@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TransactionHistoryModel {
-  final String title;
-  final String subTitel;
-  final String price;
+  final String title, price, subTitel;
   final Color color;
 
   TransactionHistoryModel({

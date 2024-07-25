@@ -29,7 +29,7 @@ class _MyCardWidgetState extends State<MyCardWidget> {
     return MainContainer(
       rightPadding: 10,
       leftPadding: 0,
-      child: CustomChart(),
+      child: CustomChartSection(),
       // child: CustomScrollView(
       //   slivers: [
       //     SliverFillRemaining(
