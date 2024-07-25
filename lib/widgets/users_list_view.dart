@@ -14,7 +14,7 @@ class _UsersListViewState extends State<UsersListView> {
     UserInfo(
         image: Assets.imagesAvatar2,
         title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail'),
+        subTitle: 'Madraniadi20@gmail.com'),
     UserInfo(
         image: Assets.imagesAvatar3,
         title: 'Josua Nunito',
@@ -22,7 +22,7 @@ class _UsersListViewState extends State<UsersListView> {
     UserInfo(
         image: Assets.imagesAvatar2,
         title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail'),
+        subTitle: 'Madraniadi20@gmail.com'),
     UserInfo(
         image: Assets.imagesAvatar3,
         title: 'Josua Nunito',

@@ -22,10 +22,7 @@ class QuickInvoiceTopSection extends StatelessWidget {
         SizedBox(
           height: 12,
         ),
-        SizedBox(
-          height: 56,
-          child: UsersListView(),
-        ),
+        UsersListView(),
       ],
     );
   }
