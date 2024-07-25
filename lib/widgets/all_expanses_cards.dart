@@ -19,19 +19,6 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    // return Row(
-    //   children: [
-    //     Expanded(
-    //       child: ExpansesCard(cardModel: cards[0], isActive: true),
-    //     ),
-    //     Expanded(
-    //       child: ExpansesCard(cardModel: cards[1], isActive: true),
-    //     ),
-    //     Expanded(
-    //       child: ExpansesCard(cardModel: cards[2], isActive: true),
-    //     ),
-    //   ],
-    // );
     return Row(
       children: cards.asMap().entries.map((ele) {
         int index = ele.key;

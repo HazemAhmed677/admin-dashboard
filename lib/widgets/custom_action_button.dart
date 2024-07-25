@@ -22,10 +22,13 @@ class CustomActionButton extends StatelessWidget {
             )),
         onPressed: () {},
         child: Center(
-          child: Text(
-            text,
-            style: AppStyles.styleSemiBold18.copyWith(
-              color: textColor,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              text,
+              style: AppStyles.styleSemiBold18.copyWith(
+                color: textColor,
+              ),
             ),
           ),
         ),

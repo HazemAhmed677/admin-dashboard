@@ -30,13 +30,13 @@ class _UsersListViewState extends State<UsersListView> {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: EdgeInsets.zero,
+    return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      itemCount: users.length,
-      itemBuilder: (context, index) => SizedBox(
-        width: 200,
-        child: users[index],
+      child: Row(
+        children: users.asMap().entries.map((ele) {
+          var item = ele.value;
+          return IntrinsicWidth(child: item);
+        }).toList(),
       ),
     );
   }

@@ -14,7 +14,7 @@ class ExpansesSection extends StatelessWidget {
         SizedBox(
           height: 16,
         ),
-        AllExpansesCards(),
+        SingleChildScrollView(child: AllExpansesCards()),
         SizedBox(
           height: 24,
         ),

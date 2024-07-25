@@ -18,24 +18,17 @@ class AllExpansesHeader extends StatelessWidget {
     return Row(
       children: [
         Flexible(
-          child: AspectRatio(
-            aspectRatio: 1,
-            child: Container(
-              decoration: const ShapeDecoration(
-                shape: OvalBorder(),
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  cardModel.iconImage,
-                  colorFilter: (isActive)
-                      ? const ColorFilter.mode(
-                          AppColors.white,
-                          BlendMode.srcIn,
-                        )
-                      : const ColorFilter.mode(
-                          AppColors.secondPrimary, BlendMode.srcIn),
-                ),
-              ),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 60),
+            child: SvgPicture.asset(
+              cardModel.iconImage,
+              colorFilter: (isActive)
+                  ? const ColorFilter.mode(
+                      AppColors.white,
+                      BlendMode.srcIn,
+                    )
+                  : const ColorFilter.mode(
+                      AppColors.secondPrimary, BlendMode.srcIn),
             ),
           ),
         ),
