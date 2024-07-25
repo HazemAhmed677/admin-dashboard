@@ -19,14 +19,27 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: List.generate(
-          3,
-          (index) => Padding(
-            padding: (index != 2)
-                ? const EdgeInsets.only(right: 12)
+    // return Row(
+    //   children: [
+    //     Expanded(
+    //       child: ExpansesCard(cardModel: cards[0], isActive: true),
+    //     ),
+    //     Expanded(
+    //       child: ExpansesCard(cardModel: cards[1], isActive: true),
+    //     ),
+    //     Expanded(
+    //       child: ExpansesCard(cardModel: cards[2], isActive: true),
+    //     ),
+    //   ],
+    // );
+    return Row(
+      children: cards.asMap().entries.map((ele) {
+        int index = ele.key;
+        var item = ele.value;
+        return Expanded(
+          child: Padding(
+            padding: (index == 1)
+                ? const EdgeInsets.symmetric(horizontal: 12)
                 : EdgeInsets.zero,
             child: GestureDetector(
               onTap: () {
@@ -36,12 +49,12 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
               },
               child: ExpansesCard(
                 isActive: (currentIndex == index),
-                cardModel: cards[index],
+                cardModel: item,
               ),
             ),
           ),
-        ),
-      ),
+        );
+      }).toList(),
     );
   }
 }

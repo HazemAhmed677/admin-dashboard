@@ -13,26 +13,21 @@ class AllExpansesWidget extends StatelessWidget {
     return const MainContainer(
       rightPadding: 20,
       leftPadding: 16,
-      child: CustomScrollView(slivers: [
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExpansesSection(),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    top: 22.0,
-                    bottom: 14,
-                  ),
-                  child: QuickInvoiceWidget(),
-                ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ExpansesSection(),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(
+                top: 22.0,
+                bottom: 14,
               ),
-            ],
+              child: QuickInvoiceWidget(),
+            ),
           ),
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }

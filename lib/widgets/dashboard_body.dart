@@ -21,7 +21,6 @@ class DashBoardBody extends StatelessWidget {
             child: AllExpansesWidget(),
           ),
           Expanded(
-            flex: 2,
             child: MyCardWidget(),
           )
         ],

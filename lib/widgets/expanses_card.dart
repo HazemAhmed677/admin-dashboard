@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_board/models/expanses_card_model.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/widgets/all_expanses_cards_header.dart';
 
 class ExpansesCard extends StatelessWidget {
   const ExpansesCard({
@@ -27,29 +27,9 @@ class ExpansesCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                SvgPicture.asset(
-                  cardModel.iconImage,
-                  colorFilter: (isActive)
-                      ? const ColorFilter.mode(
-                          AppColors.white,
-                          BlendMode.srcIn,
-                        )
-                      : const ColorFilter.mode(
-                          AppColors.secondPrimary, BlendMode.srcIn),
-                ),
-                const SizedBox(
-                  width: 56,
-                ),
-                Transform.rotate(
-                  angle: 3.14159,
-                  child: Icon(
-                    Icons.arrow_back_ios,
-                    color: (isActive) ? AppColors.white : AppColors.primary,
-                  ),
-                ),
-              ],
+            AllExpansesHeader(
+              cardModel: cardModel,
+              isActive: isActive,
             ),
             const SizedBox(
               height: 34,

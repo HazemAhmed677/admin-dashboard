@@ -11,19 +11,34 @@ class MyCardListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        'Name Card',
-        style: AppStyles.styleRegular16.copyWith(
-          color: AppColors.white,
+    return Padding(
+      padding: const EdgeInsets.only(top: 14.0),
+      child: ListTile(
+        contentPadding: EdgeInsets.zero,
+        title: Padding(
+          padding: const EdgeInsets.only(
+            left: 24,
+          ),
+          child: Text(
+            'Name Card',
+            style: AppStyles.styleSemiBold16.copyWith(
+              color: AppColors.semiWhite,
+            ),
+          ),
         ),
-      ),
-      subtitle: const Text(
-        'Syah Bandi',
-        style: AppStyles.styleMedium20,
-      ),
-      trailing: SvgPicture.asset(
-        Assets.imagesGallery,
+        subtitle: const Padding(
+          padding: EdgeInsets.only(left: 24, top: 4.0),
+          child: Text(
+            'Syah Bandi',
+            style: AppStyles.styleMedium20,
+          ),
+        ),
+        trailing: Padding(
+          padding: const EdgeInsets.only(right: 35.0),
+          child: SvgPicture.asset(
+            Assets.imagesGallery,
+          ),
+        ),
       ),
     );
   }
