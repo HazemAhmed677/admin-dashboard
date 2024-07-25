@@ -56,7 +56,7 @@ class MyCardContainer extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 27,
             ),
           ],

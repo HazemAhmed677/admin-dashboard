@@ -16,20 +16,18 @@ class AllExpansesHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Flexible(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 60),
-            child: SvgPicture.asset(
-              cardModel.iconImage,
-              colorFilter: (isActive)
-                  ? const ColorFilter.mode(
-                      AppColors.white,
-                      BlendMode.srcIn,
-                    )
-                  : const ColorFilter.mode(
-                      AppColors.secondPrimary, BlendMode.srcIn),
-            ),
+          child: SvgPicture.asset(
+            cardModel.iconImage,
+            colorFilter: (isActive)
+                ? const ColorFilter.mode(
+                    AppColors.white,
+                    BlendMode.srcIn,
+                  )
+                : const ColorFilter.mode(
+                    AppColors.secondPrimary, BlendMode.srcIn),
           ),
         ),
         const Spacer(),

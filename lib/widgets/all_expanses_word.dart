@@ -26,14 +26,13 @@ class AllExpansesWord extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                bottom: 10.0,
-                right: 14,
+                right: 6,
               ),
               child: Transform.rotate(
                 alignment: Alignment.center,
                 angle: -1.5708,
                 child: const Icon(
-                  Icons.arrow_back_ios,
+                  Icons.arrow_back_ios_new,
                   size: 24,
                 ),
               ),

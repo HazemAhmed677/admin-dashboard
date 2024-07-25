@@ -35,7 +35,7 @@ class _UsersListViewState extends State<UsersListView> {
       child: Row(
         children: users.asMap().entries.map((ele) {
           var item = ele.value;
-          return IntrinsicWidth(child: item);
+          return Card(child: IntrinsicWidth(child: item));
         }).toList(),
       ),
     );

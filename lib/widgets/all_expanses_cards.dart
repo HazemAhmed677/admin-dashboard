@@ -19,15 +19,12 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: cards.asMap().entries.map((ele) {
-        int index = ele.key;
-        var item = ele.value;
-        return Expanded(
-          child: Padding(
-            padding: (index == 1)
-                ? const EdgeInsets.symmetric(horizontal: 12)
-                : EdgeInsets.zero,
+    return Expanded(
+      child: Row(
+        children: cards.asMap().entries.map((ele) {
+          int index = ele.key;
+          var item = ele.value;
+          return Expanded(
             child: GestureDetector(
               onTap: () {
                 setState(() {
@@ -39,9 +36,9 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
                 cardModel: item,
               ),
             ),
-          ),
-        );
-      }).toList(),
+          );
+        }).toList(),
+      ),
     );
   }
 }
