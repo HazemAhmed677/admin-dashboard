@@ -19,26 +19,24 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        children: cards.asMap().entries.map((ele) {
-          int index = ele.key;
-          var item = ele.value;
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  currentIndex = index;
-                });
-              },
-              child: ExpansesCard(
-                isActive: (currentIndex == index),
-                cardModel: item,
-              ),
+    return Row(
+      children: cards.asMap().entries.map((ele) {
+        int index = ele.key;
+        var item = ele.value;
+        return Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                currentIndex = index;
+              });
+            },
+            child: ExpansesCard(
+              isActive: (currentIndex == index),
+              cardModel: item,
             ),
-          );
-        }).toList(),
-      ),
+          ),
+        );
+      }).toList(),
     );
   }
 }
