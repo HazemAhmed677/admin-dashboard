@@ -13,10 +13,8 @@ class QuickInvoiceWidget extends StatelessWidget {
       child: Column(
         children: [
           QuickInvoiceTopSection(),
-          Divider(
-            endIndent: 28,
-            indent: 28,
-            height: 48,
+          SizedBox(
+            height: 24,
           ),
           FieldsForm(),
           SizedBox(

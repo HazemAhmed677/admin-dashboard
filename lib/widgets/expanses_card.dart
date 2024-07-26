@@ -14,64 +14,67 @@ class ExpansesCard extends StatelessWidget {
   final bool isActive;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: (isActive) ? AppColors.secondPrimary : AppColors.white,
-          border: Border.all(
-            width: 1,
-            color: const Color.fromARGB(255, 106, 192, 242),
-          )),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 16,
-          horizontal: 20,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            AllExpansesHeader(
-              cardModel: cardModel,
-              isActive: isActive,
-            ),
-            const SizedBox(
-              height: 34,
-            ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                cardModel.type,
-                style: AppStyles.styleSemiBold16.copyWith(
-                  color: (isActive) ? AppColors.white : AppColors.primary,
+    return Card(
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color: (isActive) ? AppColors.secondPrimary : AppColors.white,
+            border: Border.all(
+              width: 1,
+              color: AppColors.semiWhite,
+            )),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 16,
+            horizontal: 20,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AllExpansesHeader(
+                cardModel: cardModel,
+                isActive: isActive,
+              ),
+              const SizedBox(
+                height: 34,
+              ),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  cardModel.type,
+                  style: AppStyles.styleSemiBold16.copyWith(
+                    color: (isActive) ? AppColors.white : AppColors.primary,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                'April 2022',
-                style: AppStyles.styleRegular14.copyWith(
-                  color:
-                      (isActive) ? AppColors.semiWhite : Colors.grey.shade400,
+              const SizedBox(
+                height: 8,
+              ),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  'April 2022',
+                  style: AppStyles.styleRegular14.copyWith(
+                    color:
+                        (isActive) ? AppColors.semiWhite : Colors.grey.shade400,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                r'$20,129',
-                style: AppStyles.styleSemiBold24.copyWith(
-                  color: (isActive) ? AppColors.white : AppColors.secondPrimary,
-                ),
+              const SizedBox(
+                height: 16,
               ),
-            )
-          ],
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  r'$20,129',
+                  style: AppStyles.styleSemiBold24.copyWith(
+                    color:
+                        (isActive) ? AppColors.white : AppColors.secondPrimary,
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
