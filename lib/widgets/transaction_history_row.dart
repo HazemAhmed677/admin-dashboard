@@ -13,14 +13,14 @@ class TransactionHistoryRow extends StatelessWidget {
       children: [
         Text(
           'Transaction History',
-          style: AppStyles.styleSemiBold18.copyWith(
+          style: AppStyles.styleSemiBold18(context).copyWith(
             color: AppColors.primary,
           ),
         ),
         const Spacer(),
         Text(
           'See all',
-          style: AppStyles.style1Medium16.copyWith(
+          style: AppStyles.style1Medium16(context).copyWith(
             color: AppColors.secondPrimary,
           ),
         ),

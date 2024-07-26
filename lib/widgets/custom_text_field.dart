@@ -12,7 +12,7 @@ class CustomTextField extends StatelessWidget {
       children: [
         Text(
           textFieldModel.text,
-          style: AppStyles.style1Medium16,
+          style: AppStyles.style1Medium16(context),
         ),
         TextField(
           decoration: InputDecoration(

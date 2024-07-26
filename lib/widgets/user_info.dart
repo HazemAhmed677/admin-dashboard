@@ -25,7 +25,7 @@ class UserInfo extends StatelessWidget {
         fit: BoxFit.scaleDown,
         child: Text(
           title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16(context),
         ),
       ),
       subtitle: FittedBox(
@@ -33,7 +33,7 @@ class UserInfo extends StatelessWidget {
         fit: BoxFit.scaleDown,
         child: Text(
           subTitle,
-          style: AppStyles.styleRegular12,
+          style: AppStyles.styleRegular12(context),
         ),
       ),
     );

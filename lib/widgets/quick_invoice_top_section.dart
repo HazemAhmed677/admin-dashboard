@@ -8,21 +8,21 @@ class QuickInvoiceTopSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Quick Invoice',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
-        SizedBox(
+        const SizedBox(
           height: 24,
         ),
-        LatestTransactions(),
-        SizedBox(
+        const LatestTransactions(),
+        const SizedBox(
           height: 12,
         ),
-        UsersListView(),
+        const UsersListView(),
       ],
     );
   }

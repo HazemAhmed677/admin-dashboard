@@ -10,16 +10,16 @@ class AllExpansesWord extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
+        Text(
           'All Expanses',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         const Spacer(),
         Row(
           children: [
-            const Text(
+            Text(
               'Monthly',
-              style: AppStyles.style1Medium16,
+              style: AppStyles.style1Medium16(context),
             ),
             const SizedBox(
               width: 18,

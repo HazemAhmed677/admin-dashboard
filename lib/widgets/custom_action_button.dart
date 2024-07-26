@@ -26,7 +26,7 @@ class CustomActionButton extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               text,
-              style: AppStyles.styleSemiBold18.copyWith(
+              style: AppStyles.styleSemiBold18(context).copyWith(
                 color: textColor,
               ),
             ),

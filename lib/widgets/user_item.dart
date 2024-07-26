@@ -37,7 +37,7 @@ class UserItem extends StatelessWidget {
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(
               userItem.text,
-              style: AppStyles.styleRegular16.copyWith(
+              style: AppStyles.styleRegular16(context).copyWith(
                 color: (isActive ?? false)
                     ? AppColors.secondPrimary
                     : AppColors.primary,

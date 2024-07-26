@@ -12,17 +12,17 @@ class TransactionListTile extends StatelessWidget {
       contentPadding: EdgeInsets.zero,
       title: Text(
         transactionHistoryModel.title,
-        style: AppStyles.styleSemiBold16,
+        style: AppStyles.styleSemiBold16(context),
       ),
       subtitle: Text(
         transactionHistoryModel.subTitel,
-        style: AppStyles.styleRegular16.copyWith(
+        style: AppStyles.styleRegular14(context).copyWith(
           color: AppColors.grey,
         ),
       ),
       trailing: Text(
         transactionHistoryModel.price,
-        style: AppStyles.styleSemiBold20.copyWith(
+        style: AppStyles.styleSemiBold18(context).copyWith(
           color: transactionHistoryModel.color,
         ),
       ),

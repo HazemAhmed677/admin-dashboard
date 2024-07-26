@@ -42,7 +42,7 @@ class ExpansesCard extends StatelessWidget {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   cardModel.type,
-                  style: AppStyles.styleSemiBold16.copyWith(
+                  style: AppStyles.styleSemiBold16(context).copyWith(
                     color: (isActive) ? AppColors.white : AppColors.primary,
                   ),
                 ),
@@ -54,7 +54,7 @@ class ExpansesCard extends StatelessWidget {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   'April 2022',
-                  style: AppStyles.styleRegular14.copyWith(
+                  style: AppStyles.styleRegular14(context).copyWith(
                     color:
                         (isActive) ? AppColors.semiWhite : Colors.grey.shade400,
                   ),
@@ -67,7 +67,7 @@ class ExpansesCard extends StatelessWidget {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   r'$20,129',
-                  style: AppStyles.styleSemiBold24.copyWith(
+                  style: AppStyles.styleSemiBold24(context).copyWith(
                     color:
                         (isActive) ? AppColors.white : AppColors.secondPrimary,
                   ),

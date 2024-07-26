@@ -21,16 +21,16 @@ class MyCardListTile extends StatelessWidget {
           ),
           child: Text(
             'Name Card',
-            style: AppStyles.styleSemiBold16.copyWith(
+            style: AppStyles.styleSemiBold16(context).copyWith(
               color: AppColors.semiWhite,
             ),
           ),
         ),
-        subtitle: const Padding(
-          padding: EdgeInsets.only(left: 22, top: 4.0),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(left: 22, top: 4.0),
           child: Text(
             'Syah Bandi',
-            style: AppStyles.styleMedium20,
+            style: AppStyles.styleMedium20(context),
           ),
         ),
         trailing: Padding(

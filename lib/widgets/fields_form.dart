@@ -11,38 +11,38 @@ class FieldsForm extends StatefulWidget {
 }
 
 class _FieldsFormState extends State<FieldsForm> {
-  final List<TextFieldModel> fields = [
-    TextFieldModel(
-      text: 'Customer Name',
-      hint: 'Type customer name',
-      style: AppStyles.style1Medium16.copyWith(
-        color: const Color(0xffAAAAAA),
-      ),
-    ),
-    TextFieldModel(
-      text: 'Customer Email',
-      hint: 'Type customer email',
-      style: AppStyles.style1Medium16.copyWith(
-        color: const Color(0xffAAAAAA),
-      ),
-    ),
-    TextFieldModel(
-      text: 'Item Name',
-      hint: 'Type item name',
-      style: AppStyles.style1Medium16.copyWith(
-        color: const Color(0xffAAAAAA),
-      ),
-    ),
-    TextFieldModel(
-      text: 'Customer Mount',
-      hint: 'USD',
-      style: AppStyles.style1Medium16.copyWith(
-        color: const Color(0xffAAAAAA),
-      ),
-    ),
-  ];
   @override
   Widget build(BuildContext context) {
+    final List<TextFieldModel> fields = [
+      TextFieldModel(
+        text: 'Customer Name',
+        hint: 'Type customer name',
+        style: AppStyles.style1Medium16(context).copyWith(
+          color: const Color(0xffAAAAAA),
+        ),
+      ),
+      TextFieldModel(
+        text: 'Customer Email',
+        hint: 'Type customer email',
+        style: AppStyles.style1Medium16(context).copyWith(
+          color: const Color(0xffAAAAAA),
+        ),
+      ),
+      TextFieldModel(
+        text: 'Item Name',
+        hint: 'Type item name',
+        style: AppStyles.style1Medium16(context).copyWith(
+          color: const Color(0xffAAAAAA),
+        ),
+      ),
+      TextFieldModel(
+        text: 'Customer Mount',
+        hint: 'USD',
+        style: AppStyles.style1Medium16(context).copyWith(
+          color: const Color(0xffAAAAAA),
+        ),
+      ),
+    ];
     return Column(
       children: [
         Row(

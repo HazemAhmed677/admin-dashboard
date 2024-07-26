@@ -38,7 +38,7 @@ class MyCardContainer extends StatelessWidget {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   '0918 8124 0042 8129',
-                  style: AppStyles.styleSemiBold24.copyWith(
+                  style: AppStyles.styleSemiBold24(context).copyWith(
                     color: AppColors.white,
                   ),
                 ),
@@ -50,7 +50,7 @@ class MyCardContainer extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 24.0),
                 child: Text(
                   '12/20 - 124',
-                  style: AppStyles.styleRegular16.copyWith(
+                  style: AppStyles.styleRegular16(context).copyWith(
                     color: AppColors.white,
                   ),
                 ),

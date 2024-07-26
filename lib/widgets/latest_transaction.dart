@@ -9,14 +9,14 @@ class LatestTransactions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           'Latest Transaction',
-          style: AppStyles.style1Medium16,
+          style: AppStyles.style1Medium16(context),
         ),
-        Icon(
+        const Icon(
           Icons.add,
           color: AppColors.secondPrimary,
         ),

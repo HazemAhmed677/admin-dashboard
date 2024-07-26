@@ -27,14 +27,14 @@ class PiChartDescListTile extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Text(
           piChartDataModel.title,
-          style: AppStyles.styleRegular16.copyWith(
+          style: AppStyles.styleRegular16(context).copyWith(
             color: AppColors.primary,
           ),
         ),
       ),
       trailing: Text(
         '${piChartDataModel.prec}%',
-        style: AppStyles.style1Medium16.copyWith(
+        style: AppStyles.style1Medium16(context).copyWith(
           color: const Color(0xff208CC8),
         ),
       ),
