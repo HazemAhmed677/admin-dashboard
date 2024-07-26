@@ -16,9 +16,12 @@ class ExpansesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: (isActive) ? AppColors.secondPrimary : AppColors.white,
-      ),
+          borderRadius: BorderRadius.circular(12),
+          color: (isActive) ? AppColors.secondPrimary : AppColors.white,
+          border: Border.all(
+            width: 1,
+            color: const Color.fromARGB(255, 106, 192, 242),
+          )),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 16,

@@ -71,7 +71,7 @@ class _CustomChartSectionState extends State<CustomChartSection> {
                                   ? AppColors.secondPrimary
                                   : const Color(0xff208CC8),
                       showTitle: false,
-                      radius: (currentIndex == index) ? 38 : 32,
+                      radius: (currentIndex == index) ? 34 : 28,
                     );
                   },
                 ),
@@ -79,7 +79,7 @@ class _CustomChartSectionState extends State<CustomChartSection> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 12,
         ),
         Expanded(

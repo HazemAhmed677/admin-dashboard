@@ -11,7 +11,7 @@ class DashBoardBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(
         top: 14,
-        bottom: 16,
+        bottom: 2,
       ),
       child: Row(
         children: [

@@ -24,16 +24,27 @@ class _AllExpansesCardsState extends State<AllExpansesCards> {
         int index = ele.key;
         var item = ele.value;
         return Expanded(
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                currentIndex = index;
-              });
-            },
-            child: ExpansesCard(
-              isActive: (currentIndex == index),
-              cardModel: item,
-            ),
+          child: Row(
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      currentIndex = index;
+                    });
+                  },
+                  child: ExpansesCard(
+                    isActive: (currentIndex == index),
+                    cardModel: item,
+                  ),
+                ),
+              ),
+              (index != 2)
+                  ? const SizedBox(
+                      width: 8,
+                    )
+                  : const SizedBox(),
+            ],
           ),
         );
       }).toList(),

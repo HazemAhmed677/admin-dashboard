@@ -62,4 +62,13 @@ abstract class AppStyles {
     color: AppColors.secondPrimary,
     fontFamily: 'Montserrat',
   );
+  // getResponsiveText({required BuildContext context, required String fontSize}) {
+  //   double scaleFactor = getScaleFactor(context: context, layout: layout);
+  // }
+
+  // double getScaleFactor({required BuildContext context, required int layout}) {
+  //   double widthOfScreen = MediaQuery.of(context).size.width;
+  //   double scaleFactor = widthOfScreen / layout;
+  //   return scaleFactor;
+  // }
 }

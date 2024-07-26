@@ -34,13 +34,13 @@ class _TracsactionHistoryColumnState extends State<TracsactionHistoryColumn> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Column(
           children: List.generate(
         3,
         (index) => Padding(
           padding: (index == 1)
-              ? const EdgeInsets.symmetric(vertical: 28.0)
+              ? const EdgeInsets.symmetric(vertical: 8.0)
               : EdgeInsets.zero,
           child: TransactionListTile(
             transactionHistoryModel: items[index],

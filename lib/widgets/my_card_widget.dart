@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/custom_chart.dart';
+import 'package:responsive_dash_board/widgets/card_section.dart';
 import 'package:responsive_dash_board/widgets/main_container.dart';
+import 'package:responsive_dash_board/widgets/transaction_history_section.dart';
 
 class MyCardWidget extends StatefulWidget {
   const MyCardWidget({super.key});
@@ -27,27 +28,26 @@ class _MyCardWidgetState extends State<MyCardWidget> {
     return MainContainer(
       rightPadding: 10,
       leftPadding: 0,
-      child: CustomChartSection(),
-      // child: CustomScrollView(
-      //   slivers: [
-      //     SliverFillRemaining(
-      //       hasScrollBody: false,
-      //       child: Column(
-      //         crossAxisAlignment: CrossAxisAlignment.start,
-      //         children: [
-      //           CardSection(
-      //             pageController: pageController,
-      //             currentIndex: currentIndex,
-      //           ),
-      //           const SizedBox(
-      //             height: 32,
-      //           ),
-      //           const TransactionHistorySection(),
-      //         ],
-      //       ),
-      //     ),
-      //   ],
-      // ),
+      child: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CardSection(
+                  pageController: pageController,
+                  currentIndex: currentIndex,
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                const TransactionHistorySection(),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

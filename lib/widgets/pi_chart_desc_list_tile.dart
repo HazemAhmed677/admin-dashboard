@@ -11,7 +11,7 @@ class PiChartDescListTile extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       leading: SizedBox(
-        height: 16,
+        height: 14,
         child: AspectRatio(
           aspectRatio: 1,
           child: Container(

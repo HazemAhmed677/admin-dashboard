@@ -14,22 +14,34 @@ class UserItem extends StatelessWidget {
   final UserModel userItem;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: EdgeInsets.zero,
-      leading: SvgPicture.asset(
-        userItem.iconImage,
-      ),
-      title: FittedBox(
-        alignment: Alignment.centerLeft,
-        fit: BoxFit.scaleDown,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 8.0),
-          child: Text(
-            userItem.text,
-            style: AppStyles.styleRegular16.copyWith(
-              color: (isActive ?? false)
-                  ? AppColors.secondPrimary
-                  : AppColors.primary,
+    return Container(
+      decoration: BoxDecoration(
+          border: (isActive != null)
+              ? Border(
+                  right: BorderSide(
+                      width: 3,
+                      color: (isActive!)
+                          ? AppColors.secondPrimary
+                          : Colors.transparent),
+                )
+              : null),
+      child: ListTile(
+        contentPadding: EdgeInsets.zero,
+        leading: SvgPicture.asset(
+          userItem.iconImage,
+        ),
+        title: FittedBox(
+          alignment: Alignment.centerLeft,
+          fit: BoxFit.scaleDown,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(
+              userItem.text,
+              style: AppStyles.styleRegular16.copyWith(
+                color: (isActive ?? false)
+                    ? AppColors.secondPrimary
+                    : AppColors.primary,
+              ),
             ),
           ),
         ),
