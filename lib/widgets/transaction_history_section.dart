@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_chart.dart';
+import 'package:responsive_dash_board/widgets/custom_chart_2.dart';
 import 'package:responsive_dash_board/widgets/pi_chart_header.dart';
 import 'package:responsive_dash_board/widgets/transaction_history_column.dart';
 import 'package:responsive_dash_board/widgets/transaction_history_row.dart';
@@ -9,22 +10,30 @@ class TransactionHistorySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        TransactionHistoryRow(),
-        SizedBox(
-          height: 8,
-        ),
-        TracsactionHistoryColumn(),
-        SizedBox(
-          height: 16,
-        ),
-        PiChartHeader(),
-        SizedBox(
-          height: 16,
-        ),
-        CustomChartSection(),
-      ],
+    double width = MediaQuery.sizeOf(context).width;
+    return Expanded(
+      child: Column(
+        children: [
+          const TransactionHistoryRow(),
+          const SizedBox(
+            height: 8,
+          ),
+          const TracsactionHistoryColumn(),
+          const SizedBox(
+            height: 16,
+          ),
+          const PiChartHeader(),
+          SizedBox(
+            height: (width >= 1250 && width < 1345) ? 0 : 12,
+          ),
+          (width >= 1250 && width < 1345)
+              ? const CustomChart2()
+              : const CustomChartSection(),
+          const SizedBox(
+            height: 24,
+          ),
+        ],
+      ),
     );
   }
 }

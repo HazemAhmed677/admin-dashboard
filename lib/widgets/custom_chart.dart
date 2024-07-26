@@ -62,7 +62,13 @@ class _CustomChartSectionState extends State<CustomChartSection> {
                   4,
                   (index) {
                     return PieChartSectionData(
-                      value: 22,
+                      value: (index == 0)
+                          ? 22
+                          : (index == 1)
+                              ? 20
+                              : (index == 2)
+                                  ? 25
+                                  : 40,
                       color: (index == 0)
                           ? const Color(0xffE2DECD)
                           : (index == 1)
