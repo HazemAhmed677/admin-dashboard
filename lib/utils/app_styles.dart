@@ -79,10 +79,10 @@ double getResponsiveText(
 double getScaleFactor({required BuildContext context}) {
   double widthOfScreen = MediaQuery.of(context).size.width;
   if (widthOfScreen < SizeConfig.mobileLayout) {
-    return widthOfScreen / 900;
+    return widthOfScreen / 600;
   } else if (widthOfScreen < SizeConfig.tabletLayout) {
-    return widthOfScreen / 1400;
+    return widthOfScreen / 1000;
   } else {
-    return widthOfScreen / 1800;
+    return widthOfScreen / 1600;
   }
 }

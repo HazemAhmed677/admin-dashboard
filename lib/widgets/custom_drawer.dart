@@ -14,7 +14,13 @@ class CustomDrawer extends StatelessWidget {
       rightPadding: 20,
       leftPadding: 28,
       child: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
+          ),
           SliverToBoxAdapter(
             child: UserProfileColumn(),
           ),

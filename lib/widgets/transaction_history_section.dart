@@ -12,8 +12,6 @@ class TransactionHistorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    print(width);
-
     return Expanded(
       child: Column(
         children: [

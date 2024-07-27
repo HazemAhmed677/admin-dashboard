@@ -14,7 +14,11 @@ class MyCardContainer extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
     // print(width);
     return AspectRatio(
-      aspectRatio: (width < SizeConfig.tabletLayout) ? 3.2 : 420 / 215,
+      aspectRatio: (width < SizeConfig.mobileLayout)
+          ? 420 / 215
+          : (width < SizeConfig.tabletLayout)
+              ? 3.2
+              : 420 / 215,
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.secondPrimary,
@@ -30,7 +34,7 @@ class MyCardContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const MyCardListTile(),
-            const Expanded(
+            const Flexible(
               child: SizedBox(
                 height: 42,
               ),

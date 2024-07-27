@@ -5,8 +5,9 @@ import 'package:responsive_dash_board/widgets/mobile_layout.dart';
 import 'package:responsive_dash_board/widgets/tablet_layout.dart';
 
 class DashBoardBody extends StatelessWidget {
-  const DashBoardBody({super.key});
-
+  const DashBoardBody({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return AdaptiveLayout(

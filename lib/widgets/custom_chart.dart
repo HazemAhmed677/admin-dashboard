@@ -86,7 +86,7 @@ class _CustomChartSectionState extends State<CustomChartSection> {
           ),
         ),
         const SizedBox(
-          width: 12,
+          width: 18,
         ),
         Expanded(
           child: Column(
