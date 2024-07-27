@@ -19,7 +19,7 @@ class _DashBoardViewState extends State<DashBoardView> {
     return Scaffold(
       key: scaffoldKey,
       drawer: SizedBox(
-        width: width * 0.7,
+        width: width * 0.8,
         child: const CustomDrawer(),
       ),
       appBar: (width < SizeConfig.mobileLayout)

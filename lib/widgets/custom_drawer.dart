@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/main_container.dart';
 import 'package:responsive_dash_board/widgets/user_profile_bottom_column.dart';
 import 'package:responsive_dash_board/widgets/user_profile_column.dart';
@@ -10,21 +12,27 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MainContainer(
+    return MainContainer(
       rightPadding: 20,
-      leftPadding: 28,
+      leftPadding:
+          (MediaQuery.of(context).orientation == Orientation.portrait) ? 28 : 4,
       child: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: SizedBox(
-              height: 8,
+              height:
+                  (MediaQuery.sizeOf(context).width < SizeConfig.mobileLayout)
+                      ? 0
+                      : 8,
             ),
           ),
-          SliverToBoxAdapter(
-            child: UserProfileColumn(),
+          const SliverToBoxAdapter(
+            child: SafeArea(
+              child: UserProfileColumn(),
+            ),
           ),
-          SliverFillRemaining(
+          const SliverFillRemaining(
             hasScrollBody: false,
             child: UserProfileBottomColumn(),
           )

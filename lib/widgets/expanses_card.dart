@@ -45,7 +45,7 @@ class ExpansesCard extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: (width < SizeConfig.mobileLayout) ? 8 : 16.0),
+                    horizontal: (width < SizeConfig.mobileLayout) ? 10 : 16.0),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
@@ -61,7 +61,7 @@ class ExpansesCard extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: (width < SizeConfig.mobileLayout) ? 8 : 16.0),
+                    horizontal: (width < SizeConfig.mobileLayout) ? 10 : 16.0),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
@@ -79,7 +79,7 @@ class ExpansesCard extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: (width < SizeConfig.mobileLayout) ? 8 : 16.0),
+                    horizontal: (width < SizeConfig.mobileLayout) ? 10 : 16.0),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(

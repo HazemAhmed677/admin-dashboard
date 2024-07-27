@@ -6,24 +6,30 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.sizeOf(context).height * 0.06,
-      decoration: const BoxDecoration(
-        color: AppColors.secondPrimary,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(22),
-          bottomRight: Radius.circular(22),
-        ),
+    double hight = MediaQuery.sizeOf(context).height * 0.06;
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minHeight: (MediaQuery.of(context).orientation == Orientation.landscape)
+            ? hight * 2
+            : hight,
       ),
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: Padding(
-          padding: const EdgeInsets.only(
-            left: 12.0,
-            top: 8,
-            bottom: 12,
+      child: Container(
+        height: hight,
+        decoration: const BoxDecoration(
+          color: AppColors.secondPrimary,
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(22),
+            bottomRight: Radius.circular(22),
           ),
+        ),
+        child: Align(
+          alignment: Alignment.centerLeft,
           child: IconButton(
+            padding: const EdgeInsets.all(14),
+            constraints: const BoxConstraints(),
+            style: const ButtonStyle(
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            ),
             onPressed: () {
               scaffoldKey.currentState!.openDrawer();
             },
@@ -38,5 +44,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(50);
+  Size get preferredSize => const Size.fromHeight(70);
 }

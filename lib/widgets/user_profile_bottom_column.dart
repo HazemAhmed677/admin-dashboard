@@ -8,12 +8,12 @@ class UserProfileBottomColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
-      Expanded(
+    return  Column(children: [
+      const Expanded(
         child: SizedBox(),
       ),
-      ListOfUserBottomItems(),
-      SizedBox(
+      (MediaQuery.of(context).orientation == Orientation.portrait)?const ListOfUserBottomItems():,
+      const SizedBox(
         height: 20,
       ),
     ]);
