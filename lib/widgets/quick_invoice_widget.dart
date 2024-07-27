@@ -9,38 +9,39 @@ class QuickInvoiceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          QuickInvoiceTopSection(),
-          SizedBox(
-            height: 24,
-          ),
-          FieldsForm(),
-          SizedBox(
-            height: 24,
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: CustomActionButton(
-                    text: 'Add more details',
-                    background: AppColors.white,
-                    textColor: AppColors.secondPrimary),
-              ),
-              SizedBox(
-                width: 24,
-              ),
-              Expanded(
-                child: CustomActionButton(
-                    text: 'Send Money',
-                    background: AppColors.secondPrimary,
-                    textColor: AppColors.white),
-              ),
-            ],
-          )
-        ],
-      ),
+    return const Column(
+      children: [
+        QuickInvoiceTopSection(),
+        SizedBox(
+          height: 24,
+        ),
+        FieldsForm(),
+        SizedBox(
+          height: 24,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: CustomActionButton(
+                  text: 'Add more details',
+                  background: AppColors.white,
+                  textColor: AppColors.secondPrimary),
+            ),
+            SizedBox(
+              width: 24,
+            ),
+            Expanded(
+              child: CustomActionButton(
+                  text: 'Send Money',
+                  background: AppColors.secondPrimary,
+                  textColor: AppColors.white),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 28,
+        ),
+      ],
     );
   }
 }

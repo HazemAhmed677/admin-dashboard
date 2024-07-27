@@ -38,7 +38,7 @@ class _CustomChartSectionState extends State<CustomChartSection> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(
           child: AspectRatio(

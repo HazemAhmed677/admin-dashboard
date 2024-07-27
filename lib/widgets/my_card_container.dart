@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 import 'package:responsive_dash_board/utils/assets.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/my_card_list_tile.dart';
 
 class MyCardContainer extends StatelessWidget {
@@ -10,8 +12,9 @@ class MyCardContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
     return AspectRatio(
-      aspectRatio: 420 / 215,
+      aspectRatio: (width < SizeConfig.desktopLayout) ? 3.2 : 420 / 215,
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.secondPrimary,
@@ -29,7 +32,7 @@ class MyCardContainer extends StatelessWidget {
             const MyCardListTile(),
             const Expanded(
               child: SizedBox(
-                height: 50,
+                height: 42,
               ),
             ),
             Padding(

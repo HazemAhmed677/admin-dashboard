@@ -19,25 +19,15 @@ class _UsersListViewState extends State<UsersListView> {
         image: Assets.imagesAvatar3,
         title: 'Josua Nunito',
         subTitle: 'Josua Nunito@gmail'),
-    UserInfo(
-        image: Assets.imagesAvatar2,
-        title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail.com'),
-    UserInfo(
-        image: Assets.imagesAvatar3,
-        title: 'Josua Nunito',
-        subTitle: 'Josua Nunito@gmail'),
   ];
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: users.asMap().entries.map((ele) {
-          var item = ele.value;
-          return Card(child: IntrinsicWidth(child: item));
-        }).toList(),
-      ),
+    ////pnjijkkopjo
+    return Row(
+      children: users.asMap().entries.map((ele) {
+        var item = ele.value;
+        return Card(child: IntrinsicWidth(child: item));
+      }).toList(),
     );
   }
 }

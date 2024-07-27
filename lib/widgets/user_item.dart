@@ -30,18 +30,14 @@ class UserItem extends StatelessWidget {
         leading: SvgPicture.asset(
           userItem.iconImage,
         ),
-        title: FittedBox(
-          alignment: Alignment.centerLeft,
-          fit: BoxFit.scaleDown,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Text(
-              userItem.text,
-              style: AppStyles.styleRegular16(context).copyWith(
-                color: (isActive ?? false)
-                    ? AppColors.secondPrimary
-                    : AppColors.primary,
-              ),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Text(
+            userItem.text,
+            style: AppStyles.styleRegular16(context).copyWith(
+              color: (isActive ?? false)
+                  ? AppColors.secondPrimary
+                  : AppColors.primary,
             ),
           ),
         ),

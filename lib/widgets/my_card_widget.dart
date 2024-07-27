@@ -26,26 +26,19 @@ class _MyCardWidgetState extends State<MyCardWidget> {
   @override
   Widget build(BuildContext context) {
     return MainContainer(
-      rightPadding: 10,
-      leftPadding: 0,
-      child: CustomScrollView(
-        slivers: [
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CardSection(
-                  pageController: pageController,
-                  currentIndex: currentIndex,
-                ),
-                const SizedBox(
-                  height: 32,
-                ),
-                const TransactionHistorySection(),
-              ],
-            ),
+      rightPadding: 20,
+      leftPadding: 20,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CardSection(
+            pageController: pageController,
+            currentIndex: currentIndex,
           ),
+          const SizedBox(
+            height: 32,
+          ),
+          const TransactionHistorySection(),
         ],
       ),
     );
