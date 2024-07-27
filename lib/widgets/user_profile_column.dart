@@ -14,13 +14,14 @@ class UserProfileColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        (MediaQuery.of(context).orientation == Orientation.portrait)
-            ? const UserInfo(
+        (MediaQuery.of(context).orientation == Orientation.landscape &&
+                MediaQuery.sizeOf(context).width < SizeConfig.tabletLayout)
+            ? const UserInfoForLandscape(
                 image: Assets.imagesAvatar1,
                 title: 'Lekan Okeowo',
                 subTitle: 'demo@gmail.com',
               )
-            : const UserInfoForLandscape(
+            : const UserInfo(
                 image: Assets.imagesAvatar1,
                 title: 'Lekan Okeowo',
                 subTitle: 'demo@gmail.com',

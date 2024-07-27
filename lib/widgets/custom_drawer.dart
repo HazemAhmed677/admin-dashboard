@@ -15,26 +15,37 @@ class CustomDrawer extends StatelessWidget {
     return MainContainer(
       rightPadding: 20,
       leftPadding:
-          (MediaQuery.of(context).orientation == Orientation.portrait) ? 28 : 4,
+          (MediaQuery.of(context).orientation == Orientation.portrait) ? 0 : 4,
       child: CustomScrollView(
         physics: const BouncingScrollPhysics(),
         slivers: [
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height:
-                  (MediaQuery.sizeOf(context).width < SizeConfig.mobileLayout)
-                      ? 0
-                      : 8,
-            ),
-          ),
           const SliverToBoxAdapter(
-            child: SafeArea(
-              child: UserProfileColumn(),
+            child: SizedBox(
+              height: 22,
             ),
           ),
-          const SliverFillRemaining(
+          SliverToBoxAdapter(
+            child: Padding(
+              padding:
+                  (MediaQuery.sizeOf(context).width < SizeConfig.tabletLayout &&
+                          MediaQuery.of(context).orientation ==
+                              Orientation.landscape)
+                      ? const EdgeInsets.only(left: 42)
+                      : const EdgeInsets.only(left: 22.0),
+              child: const UserProfileColumn(),
+            ),
+          ),
+          SliverFillRemaining(
             hasScrollBody: false,
-            child: UserProfileBottomColumn(),
+            child: Padding(
+              padding:
+                  (MediaQuery.sizeOf(context).width < SizeConfig.tabletLayout &&
+                          MediaQuery.of(context).orientation ==
+                              Orientation.landscape)
+                      ? const EdgeInsets.only(left: 42)
+                      : const EdgeInsets.only(left: 22.0),
+              child: const UserProfileBottomColumn(),
+            ),
           )
         ],
       ),

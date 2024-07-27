@@ -34,7 +34,7 @@ class ExpansesCard extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: (width < SizeConfig.mobileLayout) ? 4 : 8.0),
+                    horizontal: (width < SizeConfig.mobileLayout) ? 4 : 12),
                 child: AllExpansesHeader(
                   cardModel: cardModel,
                   isActive: isActive,

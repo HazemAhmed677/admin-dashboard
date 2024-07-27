@@ -11,7 +11,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       constraints: BoxConstraints(
         minHeight: (MediaQuery.of(context).orientation == Orientation.landscape)
             ? hight * 2
-            : hight,
+            : 56,
       ),
       child: Container(
         height: hight,

@@ -16,7 +16,6 @@ class AllExpansesAndMyCardWidgets extends StatelessWidget {
           hasScrollBody: false,
           child: Column(
             children: [
-              SizedBox(),
               SizedBox(
                 height: 18,
               ),

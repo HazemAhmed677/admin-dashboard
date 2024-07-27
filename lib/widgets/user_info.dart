@@ -18,6 +18,7 @@ class UserInfo extends StatelessWidget {
       leading: ClipOval(
         child: SvgPicture.asset(
           image,
+          fit: BoxFit.fill,
         ),
       ),
       title: FittedBox(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/user_item_model.dart';
 import 'package:responsive_dash_board/utils/assets.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/user_item.dart';
 import 'package:responsive_dash_board/widgets/user_item_for_landscape.dart';
 
@@ -36,19 +37,30 @@ class _ListOfUserItemsState extends State<ListOfUserItems> {
           });
         },
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 10.0,
-          ),
-          child: (MediaQuery.of(context).orientation == Orientation.portrait)
-              ? UserItem(
-                  isActive: (currentIndex == index),
-                  userItem: items[index],
-                )
-              : UserItemForLandscape(
-                  isActive: (currentIndex == index),
-                  userItem: items[index],
-                ),
-        ),
+            padding: EdgeInsets.symmetric(
+              vertical:
+                  (MediaQuery.sizeOf(context).width < SizeConfig.tabletLayout &&
+                          MediaQuery.of(context).orientation ==
+                              Orientation.portrait)
+                      ? 4
+                      : (MediaQuery.sizeOf(context).width <
+                                  SizeConfig.tabletLayout &&
+                              MediaQuery.of(context).orientation ==
+                                  Orientation.landscape)
+                          ? 10
+                          : 10.0,
+            ),
+            child: (MediaQuery.of(context).orientation ==
+                        Orientation.landscape &&
+                    MediaQuery.sizeOf(context).width < SizeConfig.tabletLayout)
+                ? UserItemForLandscape(
+                    isActive: (currentIndex == index),
+                    userItem: items[index],
+                  )
+                : UserItem(
+                    isActive: (currentIndex == index),
+                    userItem: items[index],
+                  )),
       ),
     );
   }

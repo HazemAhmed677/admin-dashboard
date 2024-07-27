@@ -24,7 +24,7 @@ class _ListOfBottomItemsForLandscapeState
       children: [
         UserItemForLandscape(userItem: bottomItems[0]),
         const SizedBox(
-          height: 8,
+          height: 12,
         ),
         UserItemForLandscape(userItem: bottomItems[1]),
       ],

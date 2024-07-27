@@ -27,7 +27,7 @@ class DesktopLayout extends StatelessWidget {
               slivers: [
                 SliverToBoxAdapter(
                   child: SizedBox(
-                    height: 20,
+                    height: 22,
                   ),
                 ),
                 SliverFillRemaining(
