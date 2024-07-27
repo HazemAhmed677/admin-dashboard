@@ -33,6 +33,7 @@ class _UsersListViewState extends State<UsersListView> {
     ////pnjijkkopjo
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
+      physics: const BouncingScrollPhysics(),
       child: Row(
         children: users.asMap().entries.map((ele) {
           var item = ele.value;

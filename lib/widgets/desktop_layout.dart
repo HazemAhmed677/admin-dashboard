@@ -23,6 +23,7 @@ class DesktopLayout extends StatelessWidget {
           Expanded(
             flex: 3,
             child: CustomScrollView(
+              physics: BouncingScrollPhysics(),
               slivers: [
                 SliverToBoxAdapter(
                   child: SizedBox(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/expanses_card_model.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/all_expanses_cards_header.dart';
 
 class ExpansesCard extends StatelessWidget {
@@ -14,6 +15,7 @@ class ExpansesCard extends StatelessWidget {
   final bool isActive;
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
     return Card(
       child: Container(
         decoration: BoxDecoration(
@@ -21,7 +23,7 @@ class ExpansesCard extends StatelessWidget {
             color: (isActive) ? AppColors.secondPrimary : AppColors.white,
             border: Border.all(
               width: 1,
-              color: AppColors.semiWhite,
+              color: Colors.grey.shade300,
             )),
         child: Padding(
           padding: const EdgeInsets.symmetric(
@@ -31,7 +33,8 @@ class ExpansesCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: (width < SizeConfig.mobileLayout) ? 4 : 8.0),
                 child: AllExpansesHeader(
                   cardModel: cardModel,
                   isActive: isActive,
@@ -41,7 +44,8 @@ class ExpansesCard extends StatelessWidget {
                 height: 34,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: (width < SizeConfig.mobileLayout) ? 8 : 16.0),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
@@ -56,7 +60,8 @@ class ExpansesCard extends StatelessWidget {
                 height: 8,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: (width < SizeConfig.mobileLayout) ? 8 : 16.0),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
@@ -73,7 +78,8 @@ class ExpansesCard extends StatelessWidget {
                 height: 16,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: (width < SizeConfig.mobileLayout) ? 8 : 16.0),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
