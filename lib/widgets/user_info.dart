@@ -15,12 +15,9 @@ class UserInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: ClipOval(
-          child: SvgPicture.asset(
-            image,
-          ),
+      leading: ClipOval(
+        child: SvgPicture.asset(
+          image,
         ),
       ),
       title: FittedBox(

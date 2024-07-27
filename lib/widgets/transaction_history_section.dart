@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/custom_chart.dart';
 import 'package:responsive_dash_board/widgets/custom_chart_2.dart';
 import 'package:responsive_dash_board/widgets/pi_chart_header.dart';
@@ -11,6 +12,8 @@ class TransactionHistorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
+    print(width);
+
     return Expanded(
       child: Column(
         children: [
@@ -24,9 +27,13 @@ class TransactionHistorySection extends StatelessWidget {
           ),
           const PiChartHeader(),
           SizedBox(
-            height: (width >= 1250 && width < 1345) ? 0 : 12,
+            height: ((width >= 1250 && width < 1345) ||
+                    (width >= 395 && width < SizeConfig.tabletLayout))
+                ? 0
+                : 12,
           ),
-          (width >= 1250 && width < 1345)
+          ((width >= 1250 && width < SizeConfig.desktopLayout) ||
+                  (width <= 320))
               ? const CustomChart2()
               : const CustomChartSection(),
           const SizedBox(

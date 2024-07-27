@@ -42,8 +42,10 @@ class _TracsactionHistoryColumnState extends State<TracsactionHistoryColumn> {
           padding: (index == 1)
               ? const EdgeInsets.symmetric(vertical: 8.0)
               : EdgeInsets.zero,
-          child: TransactionListTile(
-            transactionHistoryModel: items[index],
+          child: IntrinsicHeight(
+            child: TransactionListTile(
+              transactionHistoryModel: items[index],
+            ),
           ),
         ),
       )),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
@@ -13,8 +12,9 @@ class MyCardContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
+    // print(width);
     return AspectRatio(
-      aspectRatio: (width < SizeConfig.desktopLayout) ? 3.2 : 420 / 215,
+      aspectRatio: (width < SizeConfig.tabletLayout) ? 3.2 : 420 / 215,
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.secondPrimary,
