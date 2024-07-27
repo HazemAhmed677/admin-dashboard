@@ -12,7 +12,6 @@ class MyCardContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    // print(width);
     return AspectRatio(
       aspectRatio: (width < SizeConfig.mobileLayout)
           ? 420 / 215

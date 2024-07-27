@@ -26,50 +26,63 @@ class ExpansesCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(
             vertical: 16,
-            horizontal: 20,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AllExpansesHeader(
-                cardModel: cardModel,
-                isActive: isActive,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: AllExpansesHeader(
+                  cardModel: cardModel,
+                  isActive: isActive,
+                ),
               ),
               const SizedBox(
                 height: 34,
               ),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  cardModel.type,
-                  style: AppStyles.styleSemiBold16(context).copyWith(
-                    color: (isActive) ? AppColors.white : AppColors.primary,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    cardModel.type,
+                    style: AppStyles.styleSemiBold16(context).copyWith(
+                      color: (isActive) ? AppColors.white : AppColors.primary,
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
                 height: 8,
               ),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  'April 2022',
-                  style: AppStyles.styleRegular14(context).copyWith(
-                    color:
-                        (isActive) ? AppColors.semiWhite : Colors.grey.shade400,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    'April 2022',
+                    style: AppStyles.styleRegular14(context).copyWith(
+                      color: (isActive)
+                          ? AppColors.semiWhite
+                          : Colors.grey.shade400,
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
                 height: 16,
               ),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  r'$20,129',
-                  style: AppStyles.styleSemiBold24(context).copyWith(
-                    color:
-                        (isActive) ? AppColors.white : AppColors.secondPrimary,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    r'$20,129',
+                    style: AppStyles.styleSemiBold24(context).copyWith(
+                      color: (isActive)
+                          ? AppColors.white
+                          : AppColors.secondPrimary,
+                    ),
                   ),
                 ),
               )

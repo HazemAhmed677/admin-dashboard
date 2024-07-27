@@ -38,9 +38,9 @@ class _CustomChart2State extends State<CustomChart2> {
                 return PieChartSectionData(
                   titlePositionPercentageOffset:
                       (currentIndex == 0 || currentIndex == 2)
-                          ? 1
+                          ? 2.1
                           : (currentIndex == 1)
-                              ? 1.3
+                              ? 1.4
                               : null,
                   showTitle: true,
                   titleStyle: TextStyle(

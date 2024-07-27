@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_board/models/expanses_card_model.dart';
 import 'package:responsive_dash_board/utils/app_colors.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class AllExpansesHeader extends StatelessWidget {
   const AllExpansesHeader({
@@ -19,15 +20,26 @@ class AllExpansesHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Flexible(
-          child: SvgPicture.asset(
-            cardModel.iconImage,
-            colorFilter: (isActive)
-                ? const ColorFilter.mode(
-                    AppColors.white,
-                    BlendMode.srcIn,
-                  )
-                : const ColorFilter.mode(
-                    AppColors.secondPrimary, BlendMode.srcIn),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: 74),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: const ShapeDecoration(
+                  shape: OvalBorder(),
+                ),
+                child: SvgPicture.asset(
+                  cardModel.iconImage,
+                  colorFilter: (isActive)
+                      ? const ColorFilter.mode(
+                          AppColors.white,
+                          BlendMode.srcIn,
+                        )
+                      : const ColorFilter.mode(
+                          AppColors.secondPrimary, BlendMode.srcIn),
+                ),
+              ),
+            ),
           ),
         ),
         const Spacer(),
@@ -36,6 +48,7 @@ class AllExpansesHeader extends StatelessWidget {
           child: Icon(
             Icons.arrow_back_ios,
             color: (isActive) ? AppColors.white : AppColors.primary,
+            size: getResponsiveText(context: context, base: 24),
           ),
         ),
       ],

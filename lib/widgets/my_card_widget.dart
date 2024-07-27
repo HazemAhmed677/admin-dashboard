@@ -35,9 +35,6 @@ class _MyCardWidgetState extends State<MyCardWidget> {
             pageController: pageController,
             currentIndex: currentIndex,
           ),
-          const SizedBox(
-            height: 32,
-          ),
           const TransactionHistorySection(),
         ],
       ),

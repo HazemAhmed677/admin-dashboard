@@ -7,7 +7,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 52,
+      height: MediaQuery.sizeOf(context).height * 0.06,
       decoration: const BoxDecoration(
         color: AppColors.secondPrimary,
         borderRadius: BorderRadius.only(
@@ -20,7 +20,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Padding(
           padding: const EdgeInsets.only(
             left: 12.0,
-            top: 4,
+            top: 8,
             bottom: 12,
           ),
           child: IconButton(
@@ -38,7 +38,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(
-        18,
-      );
+  Size get preferredSize => const Size.fromHeight(50);
 }

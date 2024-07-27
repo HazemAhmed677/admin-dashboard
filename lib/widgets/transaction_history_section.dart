@@ -12,16 +12,24 @@ class TransactionHistorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
+
     return Expanded(
       child: Column(
         children: [
+          const Expanded(
+            child: SizedBox(
+              height: 32,
+            ),
+          ),
           const TransactionHistoryRow(),
           const SizedBox(
             height: 8,
           ),
           const TracsactionHistoryColumn(),
-          const SizedBox(
-            height: 16,
+          const Expanded(
+            child: SizedBox(
+              height: 16,
+            ),
           ),
           const PiChartHeader(),
           SizedBox(
@@ -30,12 +38,12 @@ class TransactionHistorySection extends StatelessWidget {
                 ? 0
                 : 12,
           ),
-          ((width >= 1250 && width < SizeConfig.desktopLayout) ||
-                  (width <= 320))
+          ((width >= SizeConfig.tabletLayout &&
+                  width < SizeConfig.desktopLayout))
               ? const CustomChart2()
               : const CustomChartSection(),
           const SizedBox(
-            height: 24,
+            height: 18,
           ),
         ],
       ),

@@ -21,7 +21,9 @@ class AllExpansesAndMyCardWidgets extends StatelessWidget {
                 height: 18,
               ),
               AllExpansesWidget(),
-              Expanded(child: MyCardWidget()),
+              Expanded(
+                child: MyCardWidget(),
+              ),
             ],
           ),
         ),
