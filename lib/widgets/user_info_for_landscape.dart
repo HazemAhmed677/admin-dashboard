@@ -17,7 +17,7 @@ class UserInfoForLandscape extends StatelessWidget {
     return Row(
       children: [
         ConstrainedBox(
-          constraints: BoxConstraints(maxHeight: 20),
+          constraints: const BoxConstraints(maxHeight: 20),
           child: AspectRatio(
             aspectRatio: 1,
             child: ClipOval(
@@ -26,6 +26,9 @@ class UserInfoForLandscape extends StatelessWidget {
               ),
             ),
           ),
+        ),
+        const SizedBox(
+          width: 8,
         ),
         Column(
           children: [

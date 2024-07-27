@@ -9,19 +9,23 @@ class TabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
+    return Padding(
+      padding: const EdgeInsets.only(
         top: 14,
         bottom: 2,
       ),
       child: Row(
         children: [
           Expanded(
-            child: CustomDrawer(),
-          ),
+              flex: (MediaQuery.of(context).orientation == Orientation.portrait)
+                  ? 1
+                  : 2,
+              child: const CustomDrawer()),
           Expanded(
-            flex: 3,
-            child: AllExpansesAndMyCardWidgets(),
+            flex: (MediaQuery.of(context).orientation == Orientation.portrait)
+                ? 3
+                : 4,
+            child: const AllExpansesAndMyCardWidgets(),
           ),
         ],
       ),
