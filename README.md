@@ -16,3 +16,5 @@
 </ul><ul>
 <li>Focus on UI components and layout without backend logic.</li>
 </ul>
+</ul><h2>Project Status</h2>
+<hr><p>Completed</p>
